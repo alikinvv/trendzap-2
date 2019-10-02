@@ -224,7 +224,7 @@ input {
 					}
 
 					background: #fff;
-					padding: 7px 11px;
+					padding: 7px 20px 7px 11px;
 					border-top-right-radius: 0;
 					border-bottom-right-radius: 0;
 					height: 39px;
@@ -232,15 +232,16 @@ input {
 					width: 100%;
 				}
 
-				img {
-					@include r(767) {
+				svg {
+					@include r(1023) {
 						display: none;
 					}
 
 					position: absolute;
-					right: 0;
+					right: -5px;
 					top: 50%;
 					transform: translateY(-50%);
+					font-size: 9px;
 				}
 			}
 
@@ -343,12 +344,24 @@ input {
 			font-family: $roboto;
 			text-decoration: none;
 			margin-left: 35px;
+			text-align: center;
+			padding-top: 3px;
 		}
 
 		span {
 			@include r(1023) {
 				display: none;
 			}
+
+			position: relative;
+			top: 2px;
+		}
+
+		svg {
+			fill: #fff;
+			font-size: 9px;
+			font-size: 11px;
+			margin-bottom: -6px;
 		}
 	}
 }
@@ -2622,6 +2635,27 @@ input {
 	width: 24%;
 	display: block;
 	margin-bottom: 58px;
+
+	&__icons {
+		a {
+			display: inline-block;
+			margin: 0 10px;
+
+			&:hover svg {
+				fill: #808080;
+			}
+
+			svg {
+				font-size: 9px;
+				fill: #c9c9c9;
+				transition: $trans;
+
+				&.heart {
+					font-size: 10px;
+				}
+			}
+		}
+	}
 
 	.main__benefit {
 		margin-bottom: 10px;
