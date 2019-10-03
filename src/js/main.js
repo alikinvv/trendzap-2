@@ -114,11 +114,16 @@ $('body').on('click', '.tabs__nav a', (e) => {
     $(`.tabs__body[data-tab="${$(e.currentTarget).attr('data-tab')}"]`).addClass('active');
 });
 
-if ($(window).width() >= 1280) {
+if ($(window).width() >= 1200) {
+    let height = 125;
+    if ($('.view').length > 0) {
+        height = $('.view').outerHeight() + 50;
+    }
     $("#sticker").sticky({
         topSpacing: 20,
-        bottomSpacing: $('.copyright').outerHeight() + $('.footer').outerHeight() + $('.view').outerHeight() + 50
+        bottomSpacing: $('.copyright').outerHeight() + $('.footer').outerHeight() + height
     });
+    
 }
 
 $('body').on('click', '.catalog__more', (e) => {
@@ -153,4 +158,8 @@ $('body').on('click', '.fits__nav a', (e) => {
     $('.fits__tab').removeClass('active');
     $(e.currentTarget).addClass('active');
     $(`.fits__tab[data-tab="${$(e.currentTarget).attr('data-tab')}"]`).addClass('active');
+});
+
+$('body').on('click', '.add-cart', (e) => {
+    $(e.currentTarget).hide().parent().find('.add__controls').show();
 });

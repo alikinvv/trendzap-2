@@ -36,11 +36,11 @@
                 <span class="rating__count">(2)</span>
             </div>
             <div class="main__heart">
-                <img src="img/login.svg" alt="">
+                <svg class="icon heart"><use xlink:href="img/symbol-defs.svg#icon-heart"></use></svg>
                 <span>Отложить</span>
             </div>
             <div class="main__compare">
-                <img src="img/login.svg" alt="">
+                <svg class="icon heart"><use xlink:href="img/symbol-defs.svg#icon-compare"></use></svg>
                 <span>Сравнить</span>
             </div>
         </div>
@@ -101,7 +101,12 @@
                     <span class="old-price">195 ₽</span>
                     <span class="price">155 ₽</span>
                     <span class="balance">Остаток: <span class="balance-count">1 шт.</span></span>
-                    <a href="javascript:void(0)" class="btn btn-blue">В корзину</a>
+                    <a href="javascript:void(0)" class="btn add-cart btn-blue">В корзину</a>
+                    <div class="add__controls" style="display: none">
+                        <a href="javascript:void(0)" class="minus">-</a>
+                        <span class="add__count"><span>3</span></span>
+                        <a href="javascript:void(0)" class="plus">+</a>
+                    </div>
                     <span class="delivery">Получение: <span class="date">23 июля</span></span>
                 </div>
             </div>
